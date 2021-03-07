@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Win32 Debug|Win32">
+      <Configuration>Win32 Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win32 Release|Win32">
+      <Configuration>Win32 Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win32 Debug|x64">
+      <Configuration>Win32 Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Win32 Release|x64">
+      <Configuration>Win32 Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetConfig Condition="'$(Configuration)'=='Win32 Debug'">Debug</TargetConfig>
+    <TargetConfig Condition="'$(Configuration)'=='Win32 Release'">Release</TargetConfig>
+    <TargetPlatform Condition="'$(Configuration)'=='Win32 Debug'">Win32</TargetPlatform>
+    <TargetPlatform Condition="'$(Configuration)'=='Win32 Release'">Win32</TargetPlatform>
+  </PropertyGroup>
+</Project>

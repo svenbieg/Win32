@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{0B5B01D4-8C78-4D6D-817E-9AB3E818BC0B}</ItemsProjectGuid>
+    <ItemsSccProjectName>$/Shared/Win32</ItemsSccProjectName>
+    <ItemsSccAuxPath>https://svenbieg.visualstudio.com</ItemsSccAuxPath>
+    <ItemsSccLocalPath>.</ItemsSccLocalPath>
+    <ItemsSccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</ItemsSccProvider>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommandLine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Console\Application.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Console\Window.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CriticalSection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Application.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\AppMessages.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\AppWindow.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Button.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\CheckBox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ComboBox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Container.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Control.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Edit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\EditBox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Frame.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Grid.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Group.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\HyperLink.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Interactive.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Picture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Label.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ListView.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\LogBox.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MainMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\Menu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MenuItem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\PopupMenu.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBand.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBandItem.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBar.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\PathEdit.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ProgressBar.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Splitter.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\StackPanel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\StatusBar.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\SwapChainPanel.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TabView.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TaskBarProgress.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TextBlock.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TrayIcon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TreeView.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\Dialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\OpenFileDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\ProgressDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SaveFileDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SelectFolderDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SimpleDialog.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Overlapped.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Window.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Input\Keyboard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Input\Mouse.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Serial\SerialPort.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Timer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ExceptionHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Bitmap.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Brush.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Cursor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\DeviceContext.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Font.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Icon.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\ImageList.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Picture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\Hmd.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\LibOvr.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\SwapTexture.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Process.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\Clipboard.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\ProcessBuffer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\RegistryKey.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TaskClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TaskHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TimeHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CommandLine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Console\Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Console\Window.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CriticalSection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Application.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\AppWindow.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Button.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\CheckBox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ComboBox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Container.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Control.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Edit.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\EditBox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Frame.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Grid.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Group.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\HyperLink.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Interactive.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Picture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Label.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ListView.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\LogBox.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MainMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\Menu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MenuItem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\PopupMenu.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBand.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBandItem.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBar.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\PathEdit.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ProgressBar.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Splitter.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\StackPanel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\StatusBar.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\SwapChainPanel.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TabView.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TaskBarProgress.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TextBlock.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TrayIcon.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TreeView.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\Dialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\OpenFileDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\ProgressDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SaveFileDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SelectFolderDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SimpleDialog.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Overlapped.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Window.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Input\Keyboard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Input\Mouse.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Serial\SerialPort.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Timer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)ExceptionHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Bitmap.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Brush.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Cursor.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\DeviceContext.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Font.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Icon.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\ImageList.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Picture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Ovr\Hmd.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Ovr\SwapTexture.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Process.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\Clipboard.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\ProcessBuffer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\RegistryKey.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TaskClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TaskHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TimeHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Compiler.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Configuration.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Globals.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Platform.props" />
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Default.props" />
+  </ItemGroup>
+</Project>

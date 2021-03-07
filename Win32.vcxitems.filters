@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Serial\SerialPort.cpp">
+      <Filter>Devices\Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)CommandLine.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Console\Application.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Window.cpp">
+      <Filter>Desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Application.cpp">
+      <Filter>Desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\AppWindow.cpp">
+      <Filter>Desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Timer.cpp">
+      <Filter>Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Ovr\Hmd.cpp">
+      <Filter>Graphics\Ovr</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Ovr\SwapTexture.cpp">
+      <Filter>Graphics\Ovr</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MainMenu.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\Menu.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MenuItem.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\PopupMenu.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBand.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBandItem.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBar.cpp">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Button.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\CheckBox.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ComboBox.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Control.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Edit.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\EditBox.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Frame.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Grid.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Group.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\HyperLink.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Label.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ListView.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\LogBox.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\PathEdit.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\ProgressBar.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Splitter.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\StackPanel.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\StatusBar.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\SwapChainPanel.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TabView.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TaskBarProgress.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TextBlock.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TrayIcon.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\TreeView.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Picture.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\Dialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\OpenFileDialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\ProgressDialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SaveFileDialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SelectFolderDialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SimpleDialog.cpp">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\Clipboard.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\RegistryKey.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)ExceptionHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)CriticalSection.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TaskClass.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)TimeHelper.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Storage\ProcessBuffer.cpp">
+      <Filter>Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Process.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Input\Keyboard.cpp">
+      <Filter>Devices\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Devices\Input\Mouse.cpp">
+      <Filter>Devices\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Console\Window.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Bitmap.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Brush.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Cursor.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Font.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Icon.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\ImageList.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Picture.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Container.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Graphics\Gdi\DeviceContext.cpp">
+      <Filter>Graphics\Gdi</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Controls\Interactive.cpp">
+      <Filter>Desktop\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Overlapped.cpp">
+      <Filter>Desktop</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)TaskHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Serial\SerialPort.h">
+      <Filter>Devices\Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommandLine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Window.h">
+      <Filter>Desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Application.h">
+      <Filter>Desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\AppWindow.h">
+      <Filter>Desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Timer.h">
+      <Filter>Devices</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\Hmd.h">
+      <Filter>Graphics\Ovr</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\LibOvr.h">
+      <Filter>Graphics\Ovr</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Ovr\SwapTexture.h">
+      <Filter>Graphics\Ovr</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MainMenu.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\Menu.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\MenuItem.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\PopupMenu.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBand.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBandItem.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Menus\ToolBar.h">
+      <Filter>Desktop\Controls\Menus</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Button.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\CheckBox.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ComboBox.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Control.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Edit.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\EditBox.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Frame.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Grid.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Group.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\HyperLink.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Label.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ListView.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\LogBox.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\PathEdit.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\ProgressBar.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Splitter.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\StackPanel.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\StatusBar.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\SwapChainPanel.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TabView.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TaskBarProgress.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TextBlock.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TrayIcon.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\TreeView.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Picture.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\Dialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\OpenFileDialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\ProgressDialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SaveFileDialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SelectFolderDialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Dialogs\SimpleDialog.h">
+      <Filter>Desktop\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\AppMessages.h">
+      <Filter>Desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\Clipboard.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\RegistryKey.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ExceptionHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)CriticalSection.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TaskClass.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)TimeHelper.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Storage\ProcessBuffer.h">
+      <Filter>Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Process.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Input\Keyboard.h">
+      <Filter>Devices\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Input\Mouse.h">
+      <Filter>Devices\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Console\Window.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Bitmap.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Brush.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Cursor.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Font.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Icon.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\ImageList.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\Picture.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Interactive.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Controls\Container.h">
+      <Filter>Desktop\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Graphics\Gdi\DeviceContext.h">
+      <Filter>Graphics\Gdi</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Desktop\Overlapped.h">
+      <Filter>Desktop</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Console\Application.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)TaskHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Devices">
+      <UniqueIdentifier>{335f21db-2cf1-40f5-94ef-edf9a2edb0cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Devices\Serial">
+      <UniqueIdentifier>{c891b19d-a961-4685-81d1-bf67628ff5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Storage">
+      <UniqueIdentifier>{155ba8fa-4faa-4a33-9eb3-d266025f3af2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Console">
+      <UniqueIdentifier>{78e36198-37bb-4dac-990f-c9cbd3cedd4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Configuration">
+      <UniqueIdentifier>{f3e76136-2454-4e10-aaec-6e318cc28f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Desktop">
+      <UniqueIdentifier>{b5373e57-e1df-4cae-9c3a-c37687a38d51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{d08c3110-4bcb-42c2-b2a8-97c254c40159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Ovr">
+      <UniqueIdentifier>{54404887-955d-49bb-9623-606fd40f052f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Desktop\Controls">
+      <UniqueIdentifier>{c8935f24-07fd-4ea6-b012-00b468cdc73c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Desktop\Controls\Menus">
+      <UniqueIdentifier>{f7896acb-92ce-4ab0-89b6-c682a1ef956c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Desktop\Dialogs">
+      <UniqueIdentifier>{9c7f7ee6-f66e-4f18-b901-92f3769c6c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Devices\Input">
+      <UniqueIdentifier>{a423afdc-8b72-4323-afc0-5cf17d3db60e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Gdi">
+      <UniqueIdentifier>{d53a4d08-fd1d-4202-854b-f1c6d7a16e54}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Default.props">
+      <Filter>Configuration</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Configuration.props">
+      <Filter>Configuration</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Globals.props">
+      <Filter>Configuration</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Compiler.props">
+      <Filter>Configuration</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Configuration\Platform.props">
+      <Filter>Configuration</Filter>
+    </None>
+  </ItemGroup>
+</Project>
