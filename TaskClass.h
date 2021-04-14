@@ -9,20 +9,7 @@
 // Using
 //=======
 
-#include "Procedure.h"
-
-
-//=============
-// Task-Status
-//=============
-
-enum class TaskStatus
-{
-Initializing,
-Running,
-Abort,
-Done
-};
+#include <functional>
 
 
 //======
@@ -32,20 +19,57 @@ Done
 class Task: public Object
 {
 public:
+	// Common
+	volatile BOOL Cancel;
+	VOID Wait();
+
+protected:
 	// Con-/Destructors
-	Task(Procedure Procedure, UINT Stack=2048);
+	Task();
 	~Task();
 
 	// Common
-	VOID Abort();
-	TaskStatus GetStatus()const { return uStatus; }
-	VOID Wait();
+	Handle<Task> hThis;
+	HANDLE hThread;
+};
+
+
+//============
+// Task Typed
+//============
+
+template <class _owner_t, class... _args_t>
+class TaskTyped: public Task
+{
+public:
+	// Using
+	typedef VOID (_owner_t::*TaskProc)(_args_t...);
+
+	// Con-/Destructors
+	TaskTyped(_owner_t* Owner, TaskProc Procedure):
+		hOwner(Owner),
+		pProcedure(Procedure)
+		{}
+
+	VOID Run(_args_t... Arguments)
+		{
+		if(hThread)
+			return;
+		hThis=this;
+		cProcedure=[this, Arguments...](){ (hOwner->*pProcedure)(Arguments...); };
+		hThread=CreateThread(nullptr, 0, &DoTask, this, 0, nullptr);
+		}
 
 private:
 	// Common
-	static DWORD WINAPI DoTask(VOID* Param);
-	Handle<Task> hThis;
-	HANDLE hThread;
-	Procedure* pProcedure;
-	TaskStatus uStatus;
+	static DWORD WINAPI DoTask(VOID* Param)
+		{
+		Handle<TaskTyped> task=(TaskTyped*)Param;
+		task->cProcedure();
+		task->hThis=nullptr;
+		return 0;
+		}
+	std::function<VOID()> cProcedure;
+	Handle<_owner_t> hOwner;
+	TaskProc pProcedure;
 };

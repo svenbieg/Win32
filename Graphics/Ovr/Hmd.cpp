@@ -96,14 +96,15 @@ VOID Hmd::StartRendering()
 if(hRenderTask)
 	return;
 Handle<Hmd> hhmd=this;
-hRenderTask=new Task([this](){ DoRender(); });
+hRenderTask=CreateTask(this, &Hmd::DoRender);
 }
 
 VOID Hmd::StopRendering()
 {
 if(hRenderTask)
 	{
-	hRenderTask->Abort();
+	hRenderTask->Cancel=true;
+	hRenderTask->Wait();
 	hRenderTask=nullptr;
 	}
 }
@@ -145,7 +146,7 @@ pSwapTextures[1]=new SwapTexture(pdev, hModule, pSession, csize.cx, csize.cy);
 VOID Hmd::DoRender()
 {
 UINT64 uframe=0;
-while(hRenderTask->GetStatus()==TaskStatus::Running)
+while(!hRenderTask->Cancel)
 	{
 	DWORD dwstarttime=GetTickCount();
 	hDeviceContext->Lock();

@@ -197,7 +197,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)Desktop\Overlapped.cpp">
       <Filter>Desktop</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)TaskHelper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)Devices\Serial\SerialPort.h">

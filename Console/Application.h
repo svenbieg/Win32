@@ -9,7 +9,7 @@
 // Using
 //=======
 
-#include "Runtime/Application.h"
+#include "Core/Application.h"
 
 
 //===========
@@ -23,7 +23,7 @@ namespace Console {
 // Application
 //=============
 
-class Application: public Runtime::Application
+class Application: public Core::Application
 {
 public:
 	// Con-/Destructors

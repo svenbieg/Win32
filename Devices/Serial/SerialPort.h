@@ -9,7 +9,8 @@
 // Using
 //=======
 
-#include "Storage/Streams/OutputStream.h"
+#include "Storage/Streams/RandomAccessStream.h"
+#include "Devices/Serial/BaudRate.h"
 
 
 //===========
@@ -24,32 +25,30 @@ namespace Devices {
 // Serial-Port
 //=============
 
-class SerialPort: public ::Storage::Streams::OutputStream
+class SerialPort: public ::Storage::Streams::RandomAccessStream
 {
 public:
 	// Con-/Destructors
-	SerialPort();
+	SerialPort(UINT Id=0, BaudRate Baud=BaudRate::Baud115200);
 
 	// Common
-	static Handle<SerialPort> Current;
-	VOID Flush()override {}
-	VOID Print(LPCSTR Value);
-	VOID Print(LPCWSTR Value);
-	VOID Print(Handle<String> Value);
-	VOID Print(UINT Length, LPCSTR Text);
-	VOID Print(UINT Length, LPCWSTR Text);
-	template <class... _args_t> VOID Print(LPCSTR Format, _args_t... Arguments) { Print(new String(Format, Arguments...)); }
-	template <class... _args_t> VOID Print(LPCWSTR Format, _args_t... Arguments) { Print(new String(Format, Arguments...)); }
-	Handle<String> Read();
+	Event<SerialPort> DataReceived;
+	VOID Listen();
+
+	// Input-Stream
+	SIZE_T Available()override;
+	SIZE_T Read(VOID* Buffer, SIZE_T Size)override;
+
+	// Output-Stream
+	VOID Flush()override;
 	SIZE_T Write(VOID const* Buffer, SIZE_T Size)override;
 
 private:
 	// Common
-	VOID DoPrint(UINT Length, LPCSTR Value);
-	VOID DoPrint(UINT Length, LPCWSTR Value);
-	SIZE_T DoWrite(BYTE const* Buffer, SIZE_T Size);
+	VOID DoListen();
 	CriticalSection cCriticalSection;
 	HANDLE hInput;
+	Handle<Task> hListenTask;
 	HANDLE hOutput;
 };
 

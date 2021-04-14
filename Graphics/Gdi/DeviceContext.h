@@ -32,7 +32,6 @@ class DeviceContext: public Graphics::DeviceContext
 {
 public:
 	// Using
-	using Bitmap=Graphics::Bitmap;
 	using GdiBitmap=Gdi::Bitmap;
 	using GdiBrush=Gdi::Brush;
 	using GdiFont=Gdi::Font;
@@ -43,19 +42,19 @@ public:
 	~DeviceContext();
 
 	// Common
-	VOID BeginPaint(Handle<Bitmap> Target)override;
-	VOID Clear(COLOR Color);
+	VOID Clear(COLOR Color=0)override;
 	VOID Clear(Handle<GdiBrush> Brush);
 	VOID DrawBitmap(Handle<GdiBitmap> Bitmap, RECT const& Rect);
 	VOID DrawIcon(Handle<Icon> Icon, INT Left, INT Top);
-	VOID DrawText(Handle<String> Text, COLOR Color)override;
+	VOID DrawText(Handle<String> Text, COLOR Color=0)override;
 	VOID DrawText(Handle<String> Text, COLOR Color, RECT const& Rect, UINT Format=DT_CENTER|DT_VCENTER);
-	VOID EndPaint()override;
-	VOID FillRect(RECT const& Rect, COLOR Color);
+	VOID FillRect(RECT const& Rect, COLOR Color=0)override;
 	VOID FillRect(RECT const& Rect, Handle<GdiBrush> Brush);
+	VOID Flush()override;
 	HDC GetHandle()const { return hDeviceContext; }
 	SIZE MeasureText(Handle<Graphics::Font> Font, Handle<String> Text)override;
-	VOID ReleaseTarget();
+	VOID SetPixel(INT Left, INT Top, COLOR c=0)override;
+	VOID SetTarget(Handle<GdiBitmap> Target);
 
 private:
 	// Flags
@@ -68,6 +67,7 @@ private:
 	// Common
 	HDC hDeviceContext;
 	HGDIOBJ hOldTarget;
+	Handle<GdiBitmap> hGdiTarget;
 	DeviceContextFlags uFlags;
 };
 

@@ -9,7 +9,7 @@
 // Using
 //=======
 
-#include "Runtime/Application.h"
+#include "Core/Application.h"
 #include "AppWindow.h"
 #include "CommandLine.h"
 
@@ -25,7 +25,7 @@ namespace Desktop {
 // Application
 //=============
 
-class Application: public Runtime::Application
+class Application: public Core::Application
 {
 public:
 	// Common

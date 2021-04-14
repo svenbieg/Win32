@@ -13,7 +13,6 @@
 #include "Devices/Serial/SerialPort.h"
 #include "Devices/Clock.h"
 #include "Application.h"
-#include "System.h"
 
 extern VOID Initialize();
 
@@ -46,9 +45,7 @@ return false;
 
 INT main()
 {
-System::Memory=new Memory();
 Clock::Current=new Clock();
-SerialPort::Current=new SerialPort();
 Application::Version="1.0";
 Window::Current=new Window();
 Initialize();
@@ -56,7 +53,6 @@ auto happ=Application::Current;
 happ->Initialized(happ);
 if(!happ->Loop)
 	return 0;
-System::Start=Clock::Current->Now();
 SetConsoleCtrlHandler(ConsoleCallback, true);
 while(happ->Loop)
 	{
@@ -89,7 +85,7 @@ namespace Console {
 //==================
 
 Application::Application(Handle<String> hname):
-Runtime::Application(hname)
+Core::Application(hname)
 {}
 
 }

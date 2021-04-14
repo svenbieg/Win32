@@ -52,24 +52,8 @@ if(GetFlag(uFlags, DeviceContextFlags::Delete))
 // Common
 //========
 
-VOID DeviceContext::BeginPaint(Handle<Bitmap> htarget)
-{
-Graphics::DeviceContext::BeginPaint(htarget);
-if(htarget)
-	{
-	auto hbmp=htarget.As<GdiBitmap>();
-	if(hbmp)
-		hOldTarget=SelectObject(hDeviceContext, hbmp->GetHandle());
-	}
-}
-
 VOID DeviceContext::Clear(COLOR c)
 {
-if(hTarget)
-	{
-	Graphics::DeviceContext::Clear(c);
-	return;
-	}
 ::RECT rc({ Clip.Left, Clip.Top, Clip.Right, Clip.Bottom });
 HBRUSH hbr=CreateSolidBrush(c&0xFFFFFF);
 ::FillRect(hDeviceContext, &rc, hbr);
@@ -78,11 +62,6 @@ DeleteObject(hbr);
 
 VOID DeviceContext::Clear(Handle<GdiBrush> hbr)
 {
-if(hTarget)
-	{
-	Graphics::DeviceContext::Clear(hbr->GetColor());
-	return;
-	}
 ::RECT rc({ Clip.Left, Clip.Top, Clip.Right, Clip.Bottom });
 ::FillRect(hDeviceContext, &rc, hbr->GetHandle());
 }
@@ -135,15 +114,6 @@ SetTextColor(hDeviceContext, c);
 ::DrawText(hDeviceContext, htext->Begin(), htext->GetLength(), &rcd, uformat);
 }
 
-VOID DeviceContext::EndPaint()
-{
-if(hOldTarget)
-	{
-	SelectObject(hDeviceContext, hOldTarget);
-	hOldTarget=NULL;
-	}
-}
-
 VOID DeviceContext::FillRect(RECT const& rc, COLOR c)
 {
 if(hTarget)
@@ -174,16 +144,25 @@ if(!AdjustRect(rcc))
 ::FillRect(hDeviceContext, &rcf, hbr->GetHandle());
 }
 
+VOID DeviceContext::Flush()
+{
+if(hOldTarget)
+	{
+	SelectObject(hDeviceContext, hOldTarget);
+	hOldTarget=NULL;
+	}
+}
+
 SIZE DeviceContext::MeasureText(Handle<Graphics::Font> hfont, Handle<String> htext)
 {
-Handle<GdiFont> hfonte=hfont.As<GdiFont>();
-if(!hfonte)
+Handle<GdiFont> gdi_font=hfont.As<GdiFont>();
+if(!gdi_font)
 	return Graphics::DeviceContext::MeasureText(hfont, htext);
 SIZE size(0, 0);
-size.Height=hfonte->GetHeight();
+size.Height=gdi_font->GetHeight();
 if(!htext)
 	return size;
-SelectObject(hDeviceContext, hfonte->GetHandle());
+SelectObject(hDeviceContext, gdi_font->GetHandle());
 ::RECT rc;
 ZeroMemory(&rc, sizeof(RECT));
 ::DrawText(hDeviceContext, htext->Begin(), htext->GetLength(), &rc, DT_CALCRECT);
@@ -191,8 +170,16 @@ size.Height=rc.bottom;
 return size;
 }
 
-VOID DeviceContext::ReleaseTarget()
+VOID DeviceContext::SetPixel(INT x, INT y, COLOR c)
 {
+::SetPixel(hDeviceContext, x, y, c);
+}
+
+VOID DeviceContext::SetTarget(Handle<GdiBitmap> target)
+{
+Graphics::DeviceContext::SetTarget(target);
+HGDIOBJ bmp=hTarget? target->GetHandle(): NULL;
+hOldTarget=SelectObject(hDeviceContext, bmp);
 }
 
 }}

@@ -29,6 +29,7 @@ INT WinMain(HINSTANCE hinst, HINSTANCE hprevinst, LPSTR pcmdline, INT icmdshow)
 {
 Initialize();
 auto happ=Desktop::Application::Current;
+happ_>Initialized(happ);
 if(happ->AppWindow)
 	happ->AppWindow->Show(icmdshow);
 MSG msg;
@@ -84,7 +85,7 @@ return ppath;
 //============================
 
 Application::Application(Handle<String> hname):
-Runtime::Application(hname),
+Core::Application(hname),
 AutoStart(this, false)
 {
 AutoStart.Changed.Add(this, &Application::OnAutoStartChanged);

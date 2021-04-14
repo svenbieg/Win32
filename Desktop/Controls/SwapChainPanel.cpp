@@ -71,7 +71,7 @@ hSwapChain=nullptr;
 
 VOID SwapChainPanel::DoRender()
 {
-while(hRenderTask->GetStatus()==TaskStatus::Running)
+while(!hRenderTask->Cancel)
 	{
 	auto cs=hDeviceContext->GetCriticalSection();
 		{
@@ -100,14 +100,15 @@ VOID SwapChainPanel::StartRendering()
 {
 if(hRenderTask)
 	return;
-hRenderTask=new Task([this](){ DoRender(); });
+hRenderTask=CreateTask(this, &SwapChainPanel::DoRender);
 }
 
 VOID SwapChainPanel::StopRendering()
 {
 if(!hRenderTask)
 	return;
-hRenderTask->Abort();
+hRenderTask->Cancel=true;
+hRenderTask->Wait();
 hRenderTask=nullptr;
 }
 
