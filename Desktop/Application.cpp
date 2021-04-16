@@ -29,7 +29,6 @@ INT WinMain(HINSTANCE hinst, HINSTANCE hprevinst, LPSTR pcmdline, INT icmdshow)
 {
 Initialize();
 auto happ=Desktop::Application::Current;
-happ_>Initialized(happ);
 if(happ->AppWindow)
 	happ->AppWindow->Show(icmdshow);
 MSG msg;

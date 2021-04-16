@@ -30,7 +30,6 @@ BOOL WINAPI ConsoleCallback(DWORD uid)
 if(uid==CTRL_CLOSE_EVENT)
 	{
 	auto happ=Application::Current;
-	happ->Destroyed(happ);
 	return true;
 	}
 return false;
@@ -50,7 +49,6 @@ Application::Version="1.0";
 Window::Current=new Window();
 Initialize();
 auto happ=Application::Current;
-happ->Initialized(happ);
 if(!happ->Loop)
 	return 0;
 SetConsoleCtrlHandler(ConsoleCallback, true);
@@ -66,7 +64,6 @@ while(happ->Loop)
 		}
 	happ->Loop(happ);
 	}
-happ->Destroyed(happ);
 return 0;
 }
 

@@ -33,6 +33,7 @@ public:
 	Property<Application, BOOL> AutoStart;
 	Handle<CommandLine> CommandLine;
 	static Handle<Application> Current;
+	Event<Application> Destroyed;
 	Handle<String> GetPath();
 	Event<Application, EXCEPTION_POINTERS*> UnhandledException;
 

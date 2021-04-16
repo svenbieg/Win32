@@ -13,8 +13,8 @@
 #include "Runtime/Application.h"
 #include "Hmd.h"
 
+using namespace Desktop;
 using namespace DirectX;
-using namespace Runtime;
 using namespace Windows::Foundation;
 
 
