@@ -26,9 +26,6 @@ namespace Desktop {
 //==================
 
 ComboBox::ComboBox(Handle<Container> hparent, BOOL bstatic, UINT ulines):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 uLines(ulines)
 {
@@ -147,7 +144,7 @@ return minsize;
 // Common Private
 //================
 
-VOID ComboBox::OnMoving(Handle<CoreWindow> hwnd, RECT& rc)
+VOID ComboBox::OnMoving(RECT& rc)
 {
 UINT uheight=rc.Bottom-rc.Top;
 UINT ucount=GetCount();

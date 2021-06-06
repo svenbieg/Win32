@@ -57,8 +57,8 @@ private:
 	// Common
 	//HWND GetBandHandle(UINT Position);
 	//UINT GetBandWidth(HWND Window);
-	VOID OnMoved(Handle<CoreWindow> Sender, RECT const& Rect);
-	VOID OnMoving(Handle<CoreWindow> Sender, RECT& Rect);
+	VOID OnMoved(RECT const& Rect);
+	VOID OnMoving(RECT& Rect);
 	VOID RearrangeBands();
 };
 

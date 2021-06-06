@@ -52,7 +52,7 @@ protected:
 
 private:
 	// Common
-	VOID OnMoving(Handle<CoreWindow> Sender, RECT& Rect);
+	VOID OnMoving(RECT& Rect);
 	VOID OnParentCommand(Handle<Window> Sender, Handle<Control> Control, UINT Command, BOOL& Handled);
 	UINT uLines;
 };

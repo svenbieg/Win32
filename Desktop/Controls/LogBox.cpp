@@ -30,8 +30,6 @@ namespace Desktop {
 //==================
 
 LogBox::LogBox(Handle<Container> hparent, Handle<String> hpath):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent)
 {
 WindowInfo info;

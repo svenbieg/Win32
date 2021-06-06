@@ -26,10 +26,7 @@ namespace Desktop {
 //==================
 
 Button::Button(Handle<Container> hparent, Handle<String> htext, UINT uid, UINT ustyle):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
-CoreButton(hparent),
+Core::Controls::Button(hparent),
 Interactive(hparent)
 {
 WindowInfo info;

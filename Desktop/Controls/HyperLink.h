@@ -47,8 +47,8 @@ protected:
 
 private:
 	// Common
-	VOID OnClicked(Handle<CoreInteractive> Sender, POINT const& Point);
 	VOID OnPainted(Handle<Window> Window, Handle<GdiContext> DeviceContext);
+	VOID OnPointerClicked(POINT Point, UINT Pointer);
 	VOID OnTextChanged(Handle<String> Text);
 };
 

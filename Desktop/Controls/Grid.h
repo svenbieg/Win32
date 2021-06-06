@@ -29,7 +29,7 @@ class Grid: public Container, public virtual Core::Controls::Grid
 {
 public:
 	// Con-/Destructors
-	Grid(Handle<DesktopContainer> Parent);
+	Grid(Handle<Container> Parent);
 };
 
 }}

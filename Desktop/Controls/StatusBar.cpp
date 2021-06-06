@@ -28,8 +28,6 @@ namespace Desktop {
 //==================
 
 StatusBar::StatusBar(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent)
 {
 Painted.Add(this, &StatusBar::OnPainted);

@@ -25,9 +25,7 @@ namespace Desktop {
 //==================
 
 StackPanel::StackPanel(Handle<Container> hparent, StackOrientation or):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent),
 uOrientation(or)
 {

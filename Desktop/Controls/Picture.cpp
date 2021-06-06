@@ -28,8 +28,6 @@ namespace Desktop {
 //==================
 
 Picture::Picture(Handle<Container> hparent, Handle<Bitmap> hbmp):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent),
 fZoom(0.f),
 hBitmap(hbmp),

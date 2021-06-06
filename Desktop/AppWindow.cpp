@@ -26,9 +26,8 @@ namespace Desktop {
 //==================
 
 AppWindow::AppWindow(Handle<String> htitle, INT iico):
-CoreWindow(nullptr),
-CoreControl(nullptr),
-CoreContainer(nullptr),
+Core::Controls::Container(nullptr),
+Overlapped(),
 Title(this, htitle)
 {
 Destroyed.Add(this, &AppWindow::OnDestroyed);

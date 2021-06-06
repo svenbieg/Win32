@@ -26,9 +26,7 @@ namespace Desktop {
 //==================
 
 ToolBar::ToolBar(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent)
 {
 Moved.Add(this, &ToolBar::OnMoved);
@@ -220,12 +218,12 @@ SendMessage(hwnd, TB_GETITEMRECT, upos, (LPARAM)&rc);
 return rc.right;
 }*/
 
-VOID ToolBar::OnMoved(Handle<CoreWindow> hsender, RECT const& rc)
+VOID ToolBar::OnMoved(RECT const& rc)
 {
 RearrangeBands();
 }
 
-VOID ToolBar::OnMoving(Handle<CoreWindow> hsender, RECT& rc)
+VOID ToolBar::OnMoving(RECT& rc)
 {
 SendMessage(hWindow, WM_SIZE, SIZE_RESTORED, rc.Right-rc.Left);
 ::RECT rcc;

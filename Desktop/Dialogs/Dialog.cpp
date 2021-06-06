@@ -58,9 +58,7 @@ CreateDialogIndirectParam(hinst, (DLGTEMPLATE*)&cTemplate, hwndparent, DialogPro
 //============================
 
 Dialog::Dialog(Handle<Container> hparent, UINT ustyle, Handle<String> htitle, UINT uico):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent)
+Core::Controls::Container(hparent)
 {
 Closed.Add(this, &Dialog::OnClosed);
 Destroyed.Add(this, &Dialog::OnDestroyed);

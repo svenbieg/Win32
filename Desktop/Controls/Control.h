@@ -32,17 +32,11 @@ class Container;
 // Control
 //=========
 
-class Control: public Window, public virtual Core::Controls::Control
+class Control: public Window
 {
 public:
-	// Using
-	using DesktopControl=Control;
-
 	// Con-/Destructors
 	Control(Handle<Container> Parent, WindowInfo* Info=nullptr);
-
-	// Common
-	VOID Create(WindowInfo const& Info) { DesktopWindow::Create(Info); }
 };
 
 }}

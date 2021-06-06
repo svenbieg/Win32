@@ -24,12 +24,10 @@ namespace Desktop {
 // Con-/Destructors
 //==================
 
-Grid::Grid(Handle<DesktopContainer> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
-CoreGrid(hparent),
-DesktopContainer(hparent)
+Grid::Grid(Handle<Container> hparent):
+Core::Controls::Container(hparent),
+Core::Controls::Grid(hparent),
+Container(hparent)
 {
 WindowInfo info;
 info.Class="Grid";

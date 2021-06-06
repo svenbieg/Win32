@@ -26,9 +26,7 @@ namespace Desktop {
 //==================
 
 TextBlock::TextBlock(Handle<Container> hparent, Handle<String> htext):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreTextBlock(hparent, htext),
+Core::Controls::TextBlock(hparent, htext),
 Control(hparent)
 {
 Painted.Add(this, &TextBlock::OnPainted);

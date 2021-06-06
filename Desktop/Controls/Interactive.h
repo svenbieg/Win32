@@ -36,8 +36,8 @@ public:
 
 private:
 	// Common
-	VOID OnCreated(Handle<DesktopWindow> Sender);
-	VOID OnFocused(Handle<CoreInteractive> Sender);
+	VOID OnCreated();
+	VOID OnFocused();
 	VOID OnMessageReceived(Handle<Window> Sender, UINT Message, WPARAM WParam, LPARAM LParam, BOOL& Handled, LRESULT& Result);
 	VOID OnTabStopChanged(BOOL TabStop);
 };

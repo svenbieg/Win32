@@ -41,7 +41,7 @@ protected:
 
 private:
 	// Common
-	VOID OnMoved(Handle<CoreWindow> Sender, RECT const& Rect);
+	VOID OnMoved(RECT const& Rect);
 	VOID OnProgressChanged(FLOAT Progress);
 	UINT uMax;
 };

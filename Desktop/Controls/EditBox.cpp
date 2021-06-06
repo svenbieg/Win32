@@ -26,9 +26,6 @@ namespace Desktop {
 //==================
 
 EditBox::EditBox(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 ReadOnly(this, false)
 {

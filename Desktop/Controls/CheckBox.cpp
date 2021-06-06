@@ -26,9 +26,6 @@ namespace Desktop {
 //==================
 
 CheckBox::CheckBox(Handle<Container> hparent, Handle<String> htext):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 Checked(this, false),
 Text(this, htext),

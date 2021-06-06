@@ -30,9 +30,6 @@ namespace Desktop {
 //==================
 
 HyperLink::HyperLink(Handle<Container> hparent, Handle<String> htext, Handle<String> hlink):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 Color(this, Colors::Blue),
 Link(this, hlink),
@@ -42,8 +39,8 @@ if(!DefaultCursor)
 	DefaultCursor=new GdiCursor(Cursors::Hand);
 if(!DefaultFont)
 	DefaultFont=new GdiFont(Fonts::HyperLinkFont);
-Clicked.Add(this, &HyperLink::OnClicked);
 Painted.Add(this, &HyperLink::OnPainted);
+PointerClicked.Add(this, &HyperLink::OnPointerClicked);
 Text.Changed.Add(this, &HyperLink::OnTextChanged);
 WindowInfo info;
 info.Cursor=DefaultCursor;
@@ -81,13 +78,6 @@ return minsize;
 // Common Private
 //================
 
-VOID HyperLink::OnClicked(Handle<CoreInteractive> hsender, POINT const& pt)
-{
-Handle<String> hlink=Link;
-if(hlink)
-	ShellExecute(NULL, "open", hlink->Begin(), nullptr, nullptr, SW_SHOW);
-}
-
 VOID HyperLink::OnPainted(Handle<Window> hsender, Handle<GdiContext> hdc)
 {
 if(!Text)
@@ -100,6 +90,15 @@ rcc.Top+=padding.Top;
 rcc.Right-=padding.Right;
 rcc.Bottom-=padding.Bottom;
 hdc->DrawText(Text, Color, rcc);
+}
+
+VOID HyperLink::OnPointerClicked(POINT pt, UINT id)
+{
+if(id!=0)
+	return;
+Handle<String> hlink=Link;
+if(hlink)
+	ShellExecute(NULL, "open", hlink->Begin(), nullptr, nullptr, SW_SHOW);
 }
 
 VOID HyperLink::OnTextChanged(Handle<String> htext)

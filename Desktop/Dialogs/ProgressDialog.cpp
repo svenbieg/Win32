@@ -28,9 +28,7 @@ namespace Desktop {
 //==================
 
 ProgressDialog::ProgressDialog(Handle<Container> hparent, Handle<String> htitle, UINT uico):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Dialog(hparent, WS_CAPTION|WS_POPUP|WS_SYSMENU, htitle, uico),
 Cancel(this),
 Element(this),

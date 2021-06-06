@@ -29,9 +29,6 @@ namespace Desktop {
 //==================
 
 SwapChainPanel::SwapChainPanel(Handle<Container> hparent, Handle<DirectXContext> hdc):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 hDeviceContext(hdc)
 {

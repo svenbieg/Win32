@@ -29,11 +29,8 @@ namespace Desktop {
 //==================
 
 ToolBand::ToolBand(Handle<ToolBar> htb, INT ipos, WORD uid):
-CoreWindow(htb),
-CoreControl(htb),
-CoreContainer(htb),
+Core::Controls::Container(htb),
 Container(htb),
-Visible(this, true),
 pToolBar(htb),
 uId(uid)
 {

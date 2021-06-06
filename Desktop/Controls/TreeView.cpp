@@ -28,8 +28,6 @@ namespace Desktop {
 //==================
 
 TreeView::TreeView(Handle<Container> hparent, BOOL bborder):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent)
 {
 SetLastError(0);

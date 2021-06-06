@@ -26,9 +26,6 @@ namespace Desktop {
 //==================
 
 Edit::Edit(Handle<Container> hparent, Handle<String> htext):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
 Interactive(hparent),
 ReadOnly(this, false),
 hEdit(NULL),

@@ -26,9 +26,7 @@ namespace Desktop {
 //==================
 
 Label::Label(Handle<Container> hparent, Handle<Variable> hvar):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreLabel(hparent, hvar),
+Core::Controls::Label(hparent, hvar),
 Control(hparent)
 {
 Painted.Add(this, &Label::OnPainted);

@@ -14,6 +14,8 @@
 
 using namespace Graphics::Gdi;
 
+using CoreControl=Core::Controls::Control;
+
 
 //===========
 // Namespace
@@ -28,9 +30,7 @@ namespace Desktop {
 //==================
 
 Splitter::Splitter(Handle<Container> hparent, SplitterOrientation orientation):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent),
 cOrientation(orientation),
 iCurrentSize(0),

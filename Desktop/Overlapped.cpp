@@ -25,12 +25,13 @@ namespace Desktop {
 //==================
 
 Overlapped::Overlapped(WindowInfo* pinfo):
-CoreWindow(nullptr),
-CoreControl(nullptr),
-CoreContainer(nullptr),
-Container(nullptr, pinfo)
+Core::Controls::Control(nullptr),
+Core::Controls::Container(nullptr),
+Container(nullptr)
 {
 MessageReceived.Add(this, &Overlapped::OnMessageReceived);
+if(pinfo)
+	Create(*pinfo);
 }
 
 
@@ -107,17 +108,6 @@ hcontent->Move(rc);
 
 VOID Overlapped::OnMessageReceived(Handle<Window> hwnd, UINT umsg, WPARAM wparam, LPARAM lparam, BOOL& bhandled, LRESULT& lr)
 {
-if(bhandled)
-	{
-	if(umsg==WM_SIZE)
-		{
-		if(wparam==SIZE_MINIMIZED)
-			Minimized(this);
-		if(wparam==SIZE_MAXIMIZED)
-			Maximized(this);
-		}
-	return;
-	}
 bhandled=true;
 switch(umsg)
 	{
@@ -175,6 +165,10 @@ switch(umsg)
 		RECT rcc({ 0, 0, rc.right, rc.bottom });
 		Rearrange(hdc, rcc);
 		Repaint();
+		if(wparam==SIZE_MINIMIZED)
+			Minimized(this);
+		if(wparam==SIZE_MAXIMIZED)
+			Maximized(this);
 		break;
 		}
 	case WM_SIZING:

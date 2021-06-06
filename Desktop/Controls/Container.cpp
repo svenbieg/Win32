@@ -29,9 +29,8 @@ Container(Current, nullptr)
 {}
 
 Container::Container(Handle<Container> hparent, WindowInfo* pinfo):
-CoreWindow(hparent),
-CoreContainer(hparent),
-DesktopControl(hparent, pinfo)
+Core::Controls::Container(hparent),
+Control(hparent, pinfo)
 {
 MessageReceived.Add(this, &Container::OnMessageReceived);
 }

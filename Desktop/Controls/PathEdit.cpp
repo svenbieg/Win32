@@ -33,9 +33,7 @@ namespace Desktop {
 //==================
 
 PathEdit::PathEdit(Handle<Container> hparent, Handle<String> hpath):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent),
 Button(this, true),
 Directory(false),

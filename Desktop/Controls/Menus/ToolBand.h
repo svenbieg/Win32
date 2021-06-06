@@ -66,7 +66,6 @@ public:
 	Handle<ToolBar> Parent;
 	VOID Rearrange(Handle<DeviceContext> DeviceContext, RECT& Rect)override;
 	BOOL ShowButton(WORD Id, BOOL Visible);
-	Property<ToolBand, BOOL> Visible;
 	
 private:
 	// Common

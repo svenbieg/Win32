@@ -70,7 +70,6 @@ return GetWindowLong(hWindow, GWL_EXSTYLE);
 
 VOID Window::Invalidate()
 {
-CoreWindow::Invalidate();
 if(hWindow)
 	InvalidateRect(hWindow, nullptr, true);
 }
@@ -133,7 +132,7 @@ return (WNDPROC)SetWindowLongPtr(hWindow, GWLP_WNDPROC, (LONG_PTR)pproc);
 //============================
 
 Window::Window(Handle<Container> hparent):
-CoreWindow(hparent),
+Core::Controls::Control(hparent),
 // Common
 BackgroundBrush(this),
 // Common Protected
@@ -345,7 +344,7 @@ switch(umsg)
 	}
 }
 
-VOID Window::OnMoved(Handle<CoreWindow> hsender, RECT const& rc)
+VOID Window::OnMoved(RECT const& rc)
 {
 if(hWindow)
 	MoveWindow(hWindow, rc.Left, rc.Top, rc.Right-rc.Left, rc.Bottom-rc.Top, false);

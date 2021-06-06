@@ -28,9 +28,7 @@ namespace Desktop {
 //==================
 
 TabView::TabView(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent)
 {
 SetLastError(0);

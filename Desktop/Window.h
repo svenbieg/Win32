@@ -9,7 +9,7 @@
 // Using
 //=======
 
-#include "Core/Window.h"
+#include "Core/Controls/Control.h"
 #include "Graphics/Gdi/Brush.h"
 #include "Graphics/Gdi/Cursor.h"
 #include "Graphics/Gdi/DeviceContext.h"
@@ -82,12 +82,11 @@ UINT Width;
 // Window
 //========
 
-class Window: public virtual Core::Window
+class Window: public virtual Core::Controls::Control
 {
 public:
 	// Using
 	using Container=Desktop::Controls::Container;
-	using DesktopWindow=Desktop::Window;
 	using GdiBrush=Graphics::Gdi::Brush;
 	using GdiContext=Graphics::Gdi::DeviceContext;
 	using GdiCursor=Graphics::Gdi::Cursor;
@@ -108,7 +107,7 @@ public:
 	UINT GetStyle();
 	BOOL GetStyle(UINT Flag);
 	UINT GetStyleEx();
-	VOID Invalidate()override;
+	VOID Invalidate();
 	Event<Window, UINT, WPARAM, LPARAM, BOOL&, LRESULT&> MessageReceived;
 	Event<Window, Handle<GdiContext>> Painted;
 	virtual VOID Repaint();
@@ -133,7 +132,7 @@ private:
 	static LRESULT CALLBACK ClassWndProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LParam);
 	VOID OnBackgroundBrushChanged(Handle<GdiBrush> BackgroundBrush);
 	VOID OnMessageReceived(Handle<Window> Sender, UINT Message, WPARAM WParam, LPARAM LParam, BOOL& Handled, LRESULT& Result);
-	VOID OnMoved(Handle<CoreWindow> Sender, RECT const& Rect);
+	VOID OnMoved(RECT const& Rect);
 	VOID OnVisibleChanged(BOOL Visible);
 	static LRESULT CALLBACK WndProc(HWND Window, UINT Message, WPARAM WParam, LPARAM LParam);
 	Handle<Window> hThis;

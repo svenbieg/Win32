@@ -25,9 +25,7 @@ namespace Desktop {
 //==================
 
 Control::Control(Handle<Container> hparent, WindowInfo* pinfo):
-CoreWindow(hparent),
-CoreControl(hparent),
-DesktopWindow(hparent)
+Desktop::Window(hparent)
 {
 if(pinfo)
 	Create(*pinfo);

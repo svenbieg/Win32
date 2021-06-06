@@ -28,19 +28,14 @@ namespace Desktop {
 //==================
 
 Frame::Frame(Handle<Container> hparent, Handle<CoreControl> hcontent, Handle<DirectXContext> hdc):
-CoreWindow(hparent),
-CoreControl(hparent),
 SwapChainPanel(hparent, hdc),
 Content(hcontent)
 {
-Clicked.Add(this, &Frame::OnClicked);
-ContextMenu.Add(this, &Frame::OnContextMenu);
-DoubleClicked.Add(this, &Frame::OnDoubleClicked);
 KeyDown.Add(this, &Frame::OnKeyDown);
 KeyUp.Add(this, &Frame::OnKeyUp);
-LButtonDown.Add(this, &Frame::OnLButtonDown);
-LButtonUp.Add(this, &Frame::OnLButtonUp);
+PointerDown.Add(this, &Frame::OnPointerDown);
 PointerMoved.Add(this, &Frame::OnPointerMoved);
+PointerUp.Add(this, &Frame::OnPointerUp);
 PointerWheel.Add(this, &Frame::OnPointerWheel);
 Rendered.Add(this, &Frame::OnRendered);
 WindowInfo info;
@@ -72,58 +67,40 @@ return minsize;
 // Common Private
 //================
 
-VOID Frame::OnClicked(Handle<CoreInteractive> hsender, POINT const& pt)
+VOID Frame::OnKeyDown(VirtualKey key)
 {
 if(Content)
-	Content->DoClick(pt);
+	Content->KeyDown(Content, key);
 }
 
-VOID Frame::OnContextMenu(Handle<CoreInteractive> hsender, POINT const& pt)
+VOID Frame::OnKeyUp(VirtualKey key)
 {
 if(Content)
-	Content->DoContextMenu(pt);
+	Content->KeyUp(Content, key);
 }
 
-VOID Frame::OnDoubleClicked(Handle<CoreInteractive> hsender, POINT const& pt)
+VOID Frame::OnPointerDown(POINT pt, UINT id)
 {
 if(Content)
-	Content->DoDoubleClick(pt);
+	Content->PointerDown(Content, pt, id);
 }
 
-VOID Frame::OnKeyDown(Handle<CoreInteractive> hsender, VirtualKey key)
+VOID Frame::OnPointerMoved(POINT pt, UINT id)
 {
 if(Content)
-	Content->DoKey(key, true);
+	Content->PointerMoved(Content, pt, id);
 }
 
-VOID Frame::OnKeyUp(Handle<CoreInteractive> hsender, VirtualKey key)
+VOID Frame::OnPointerUp(POINT pt, UINT id)
 {
 if(Content)
-	Content->DoKey(key, false);
+	Content->PointerUp(Content, pt, id);
 }
 
-VOID Frame::OnLButtonDown(Handle<CoreInteractive> hsender, POINT const& pt)
+VOID Frame::OnPointerWheel(POINT pt, INT idelta)
 {
 if(Content)
-	Content->DoLButton(pt, true);
-}
-
-VOID Frame::OnLButtonUp(Handle<CoreInteractive> hsender, POINT const& pt)
-{
-if(Content)
-	Content->DoLButton(pt, false);
-}
-
-VOID Frame::OnPointerMoved(Handle<CoreInteractive> hsender, POINT const& pt)
-{
-if(Content)
-	Content->DoMovePointer(pt);
-}
-
-VOID Frame::OnPointerWheel(Handle<CoreInteractive> hsender, POINT const& pt, INT idelta)
-{
-if(Content)
-	Content->DoPointerWheel(pt, idelta);
+	Content->PointerWheel(Content, pt, idelta);
 }
 
 VOID Frame::OnRendered(Handle<SwapChainPanel> hpanel)

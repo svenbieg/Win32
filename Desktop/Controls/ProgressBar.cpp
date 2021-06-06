@@ -27,8 +27,6 @@ namespace Desktop {
 //==================
 
 ProgressBar::ProgressBar(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent),
 Progress(this, 0.f),
 uMax(0)
@@ -76,7 +74,7 @@ return minsize;
 // Common Private
 //================
 
-VOID ProgressBar::OnMoved(Handle<CoreWindow> hwnd, RECT const& rc)
+VOID ProgressBar::OnMoved(RECT const& rc)
 {
 uMax=(UINT)(rc.Right-rc.Left);
 UINT urange=uMax<<16;

@@ -27,9 +27,7 @@ namespace Desktop {
 //==================
 
 Interactive::Interactive(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreInteractive(hparent),
+Core::Controls::Interactive(hparent),
 Control(hparent),
 TabStop(this, false)
 {
@@ -43,14 +41,14 @@ MessageReceived.Add(this, &Interactive::OnMessageReceived);
 // Common Private
 //================
 
-VOID Interactive::OnCreated(Handle<DesktopWindow> hsender)
+VOID Interactive::OnCreated()
 {
 BOOL btabstop=GetStyle(WS_TABSTOP);
 TabStop.SetInternal(btabstop);
 TabStop.Changed.Add(this, &Interactive::OnTabStopChanged);
 }
 
-VOID Interactive::OnFocused(Handle<CoreInteractive> hsender)
+VOID Interactive::OnFocused()
 {
 for(auto pparent=pParent; pparent!=nullptr; pparent=pparent->GetParent())
 	{
@@ -106,7 +104,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		DoubleClicked(this, p);
+		PointerDoubleClicked(this, p);
 		break;
 		}
 	case WM_LBUTTONDOWN:
@@ -114,7 +112,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		LButtonDown(this, p);
+		PointerDown(this, p, 0);
 		break;
 		}
 	case WM_LBUTTONUP:
@@ -122,7 +120,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		LButtonUp(this, p);
+		PointerUp(this, p, 0);
 		break;
 		}
 	case WM_MOUSEMOVE:
@@ -130,7 +128,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		PointerMoved(this, p);
+		PointerMoved(this, p, 0);
 		break;
 		}
 	case WM_MOUSEWHEEL:
@@ -147,7 +145,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		RButtonDown(this, p);
+		PointerDown(this, p, 1);
 		break;
 		}
 	case WM_RBUTTONUP:
@@ -155,7 +153,7 @@ switch(umsg)
 		POINT p;
 		p.Left=GET_X_LPARAM(lparam);
 		p.Top=GET_Y_LPARAM(lparam);
-		RButtonUp(this, p);
+		PointerUp(this, p, 1);
 		break;
 		}
 	case WM_SETFOCUS:

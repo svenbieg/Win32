@@ -25,12 +25,10 @@ namespace Console {
 //==================
 
 Window::Window():
-CoreWindow(nullptr),
-DesktopWindow(nullptr)
+Desktop::Window(nullptr)
 {
 hWindow=GetConsoleWindow();
 SetProperty("WindowHandle", this);
-Visible.SetInternal(true);
 }
 
 

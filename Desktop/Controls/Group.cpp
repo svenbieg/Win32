@@ -27,9 +27,7 @@ namespace Desktop {
 //==================
 
 Group::Group(Handle<Container> hparent, Handle<String> htitle):
-CoreWindow(hparent),
-CoreControl(hparent),
-CoreContainer(hparent),
+Core::Controls::Container(hparent),
 Container(hparent),
 Title(this, htitle)
 {

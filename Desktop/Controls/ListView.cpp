@@ -28,8 +28,6 @@ namespace Desktop {
 //==================
 
 ListView::ListView(Handle<Container> hparent):
-CoreWindow(hparent),
-CoreControl(hparent),
 Control(hparent),
 uColumnCount(0),
 uSortColumn(0)

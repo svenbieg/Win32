@@ -28,9 +28,6 @@ namespace Desktop {
 class Container: public Control, public virtual Core::Controls::Container
 {
 public:
-	// Using
-	using DesktopContainer=Container;
-
 	// Con-/Destructors
 	Container();
 	Container(Handle<Container> Parent, WindowInfo* Info=nullptr);
